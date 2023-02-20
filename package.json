@@ -5,6 +5,7 @@
   "author": "Syed Muaz Ali",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.9.0",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@hot-loader/react-dom": "^16.13.0",
     "@primer/octicons-react": "^9.6.0",

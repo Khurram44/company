@@ -11,7 +11,7 @@ class Navbar extends React.Component {
         this.state = {
           collapse: false,
           sticky: false,
-          sections: this.props.sections ? this.props.sections : ['home', 'about', 'services', 'portfolio', 'testimonials', 'clients', 'team', 'blog', 'contact']
+          sections: this.props.sections ? this.props.sections : ['home', 'about', 'services', 'portfolio', 'testimonials', 'blog', 'contact']
         }
     }
 
@@ -137,7 +137,8 @@ class Navbar extends React.Component {
             <NavbarWrapper className={`header${this.state.sticky === true ? ' sticky' : ''}`}>
                 <NavbarContainer>
                     <LogoWrapper className="logo">
-                        <Logo src="/img/logo.png" alt="logo" />
+                        {/* <Logo src="/img/logo.png" alt="logo" /> */}
+                        <h2 style={{color:"white" , fontWeight:"bolder"}}>DEVSTAX</h2>
                     </LogoWrapper>
                     <Toggler
                         onClick={() => this.collapseNav()}

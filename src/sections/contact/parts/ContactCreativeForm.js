@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
 import styled, { keyframes } from 'styled-components'
+import { SendEmail } from '../../../Api/Api';
+
 
 class ContactOneForm extends React.Component {
       constructor(props) {
@@ -9,15 +11,19 @@ class ContactOneForm extends React.Component {
             email: "",
             phone: "",
             message: "",
-            error: false
+            error: false,
         }
     }
 
     formSubmit() {
-      if (this.state.name === "" || this.state.email === "" || this.state.message === "") {
+      if (this.state.name === "" || this.state.email === "" ||  this.state.message === "") {
           this.setState({error: true})
       } else {
           this.setState({error: false})
+          SendEmail(this.state.name,this.state.email,this.state.phone,this.state.message).then(e=>{
+            alert(e.message)
+            this.setState({})
+          })
       }
       this.forceUpdate()
     }
@@ -44,17 +50,20 @@ class ContactOneForm extends React.Component {
             background-color: #04e5e5;
             margin-bottom: 30px;
             margin-left: 6px;
+           
         `
 
         const ContactForm = styled.div`
             padding: 40px;
-            width: 100%;
+            width: 120%;
+           
         `
 
         const Heading = styled.h2`
             font-size: 70px;
             font-family: Teko;
             color: #fff;
+            
         `
 
         const InputElement = styled.div`
@@ -150,6 +159,8 @@ class ContactOneForm extends React.Component {
                 Get In Touch
               </Heading>
               <Separator />
+              
+            
               <InputElement>
                 <Input type="text" defaultValue={this.state.name} className={`name ${this.check(this.state.name) ? "" : "error"}`} placeholder="Name" onChange={e => this.setState({name: e.target.value})} />
               </InputElement>

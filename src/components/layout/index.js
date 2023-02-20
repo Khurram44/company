@@ -21,7 +21,7 @@ class Layout extends React.Component {
     return (
       <div id="main">
         <Navbar scroll={this.props.isHome ? true : false} sections={this.props.sections} />
-        <PageRevealer />
+        {/* <PageRevealer /> */}
         <div>
           {children}
         </div>

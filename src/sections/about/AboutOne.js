@@ -213,7 +213,7 @@ class AboutOne extends React.Component {
                         <LeftCol md={6}>
                             <RevealContent>
                                 <Heading>
-                                    Renowned <Color>Software</Color> Company From <Color>London</Color>
+                                    Renowned <Color>Software</Color> Company From <Color>Germany</Color>
                                 </Heading>
                             </RevealContent>
                         </LeftCol>
@@ -243,7 +243,7 @@ class AboutOne extends React.Component {
                                 <Col md={6}>
                                     <AnimationContainer animation="fadeInRight" delay={1000}>
                                         <CounterComponent>
-                                            <Counter value={10} duration={5} delay={1000} symbol="+" text="Honourable Awards" />
+                                            <Counter value={110} duration={5} delay={1000} symbol="+" text="Completed Projects" />
                                         </CounterComponent>
                                     </AnimationContainer>
                                 </Col>

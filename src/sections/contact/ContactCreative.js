@@ -4,6 +4,12 @@ import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import AnimationContainer from 'components/animation-container'
 import ContactCreativeForm from './parts/ContactCreativeForm.js'
+import Email from '../../assets/email.png'
+import Phone from '../../assets/call.png'
+import Location from '../../assets/address.png'
+
+
+
 
 class ContactCreative extends React.Component {
 
@@ -105,11 +111,11 @@ class ContactCreative extends React.Component {
                       <ContactCol md={6}>
                           <ContactCreativeForm />
                       </ContactCol>
-                      <ContactCol md={6}>
+                      {/* <ContactCol md={6}>
                         <Map  
                           title="map"
                           src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"/>
-                      </ContactCol>
+                      </ContactCol> */}
                     </FormRow>
                   </AnimationContainer>
                   <IconRow>
@@ -117,15 +123,15 @@ class ContactCreative extends React.Component {
                         <AnimationContainer animation="fadeIn" delay={500}>
                           <InfoPart>
                             <IconContainer>
-                                <Icon src={this.props.emailIcon.childImageSharp.fluid.src} alt="email" />
+                                <Icon src={Email} alt="email" />
                             </IconContainer>
                             <Info>
                               <InfoTitle>
                                 Email
                               </InfoTitle>
                               <InfoLinkContainer>
-                                <InfoLink href="mailto:email@yoursite.com">
-                                  email@yoursite.com
+                                <InfoLink href="mailto:admin@devstax.org">
+                                admin@devstax.org
                                 </InfoLink>
                               </InfoLinkContainer>
                             </Info>
@@ -136,15 +142,15 @@ class ContactCreative extends React.Component {
                         <AnimationContainer animation="fadeIn" delay={1000}>
                           <InfoPart>
                             <IconContainer>
-                              <Icon src={this.props.phoneIcon.childImageSharp.fluid.src} alt="phone" />
+                              <Icon src={Phone} alt="phone" />
                             </IconContainer>
                             <Info>
                               <InfoTitle>
-                                Phone
+                                Upwork
                               </InfoTitle>
                               <InfoLinkContainer>
-                                <InfoLink href="tel:+(123)123-1234">
-                                  (123) 456-7890
+                                <InfoLink href="https://www.upwork.com/o/companies/~0117ed7c23354edd2d/">
+                                  Hire Us
                                 </InfoLink>
                               </InfoLinkContainer>
                             </Info>
@@ -155,15 +161,15 @@ class ContactCreative extends React.Component {
                         <AnimationContainer animation="fadeIn" delay={1500}>
                           <InfoPart>
                             <IconContainer>
-                              <Icon src={this.props.mapIcon.childImageSharp.fluid.src} alt="map" />
+                              <Icon src={Location} alt="map" />
                             </IconContainer>
                             <Info>
                               <InfoTitle>
-                                Address
+                                Call Us
                               </InfoTitle>
                               <InfoLinkContainer>
-                                <InfoLink target="_blank" href="https://maps.google.com/maps?ll=53.343244,-6.259338&z=14&t=m&hl=en&gl=US&mapclient=embed&q=1%20Grafton%20Street%20Dublin%20Ireland">
-                                  1 Grafton Street Dublin Ireland
+                                <InfoLink target="_blank" href="telno:+92 310 480 1943">
+                                  Let's connect
                                 </InfoLink>
                               </InfoLinkContainer>
                             </Info>

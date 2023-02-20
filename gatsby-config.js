@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Abstract - Creative Agency Personal Portfolio Template',
+    title: 'DEVSTAX-Software development company',
     description:
-      'Abstract is a beautiful template built using React and Gatsby for creative agency or personal projects',
+      'Devstax is software development company tends to provide software solutions and services for mobile app development and website development.',
   },
   pathPrefix: '/',
   plugins: [
